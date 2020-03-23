@@ -1,1 +1,1 @@
-# VSCode project template for programming competitions.
+# VSCode Rust project template for programming competitions.
