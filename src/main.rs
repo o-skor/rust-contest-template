@@ -27,7 +27,7 @@ impl Scanner {
 fn solve_case<T: Write>(scan: &mut Scanner, out: &mut BufWriter<T>) {
     let a: i32 = scan.next();
     let b: i32 = scan.next();
-    writeln!(out, "{}", a+b).unwrap();
+    writeln!(out, "{}", a + b).unwrap();
 }
 
 fn solve<T: Write>(scan: &mut Scanner, out: &mut BufWriter<T>) {
