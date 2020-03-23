@@ -1,0 +1,6 @@
+{
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.executorMap": {
+        "rust": "cargo run < in.txt"
+    },
+}

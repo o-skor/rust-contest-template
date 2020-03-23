@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "my_launch",
+      "type": "gdb",
+      "gdbpath": "rust-gdb",
+      "request": "launch",
+      "target": "${workspaceFolder}/target/debug/contest",
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "my_build",
+      "arguments": "< in.txt",
+    },
+  ]
+}
