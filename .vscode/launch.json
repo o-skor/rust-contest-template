@@ -2,7 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "my_launch",
+      // Install CodeLLDB extension first: vadimcn.vscode-lldb
+      "name": "my_lldb_launch",
+      "type": "lldb",
+      "request": "launch",
+      "cargo": {
+        "args": [
+          "build",
+        ]
+      },
+      "program": "${workspaceFolder}/target/debug/contest",
+      "stdio": "in.txt",
+    },
+    {
+      "name": "my_gdb_launch",
       "type": "gdb",
       "gdbpath": "rust-gdb",
       "request": "launch",
