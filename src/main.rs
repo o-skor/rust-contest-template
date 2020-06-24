@@ -38,8 +38,16 @@ fn solve<T: Write>(scan: &mut Scanner, out: &mut BufWriter<T>) {
 }
 
 fn main() {
-    let mut scan = Scanner::default();
-    let out = stdout();
-    let mut out = BufWriter::new(out.lock());
-    solve(&mut scan, &mut out);
+    std::thread::Builder::new()
+        .name("solver_thread".into())
+        .stack_size(1024 * 1024 * 1024)
+        .spawn(|| {
+            let mut scan = Scanner::default();
+            let out = stdout();
+            let mut out = BufWriter::new(out.lock());
+            solve(&mut scan, &mut out);
+        })
+        .unwrap()
+        .join()
+        .unwrap();
 }
